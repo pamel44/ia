@@ -1,0 +1,13 @@
+{
+  "name": "lumi-aula03-agente",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aula 03 - Agente com function calling",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "mysql2": "^3.11.0"
+  }
+}

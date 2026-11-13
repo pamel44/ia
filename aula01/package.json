@@ -1,0 +1,10 @@
+{
+  "name": "lumi-aula01-chat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aula 01 - Chat local com Ollama",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {}
+}

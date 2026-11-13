@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf3f6">
+  <title>Lumi IA · Rosa Aurora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-rose">
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Menu de conversas">
+      <div class="sidebar-head">
+        <div class="logo"><span class="logo-symbol">✦</span></div>
+        <div class="brand-name"><strong>Lumi<span class="name-dot">.</span></strong><small>assistente inteligente</small></div>
+        <button id="fechar-sidebar" class="close-sidebar" type="button" aria-label="Fechar menu">✕</button>
+      </div>
+      <button id="nova" type="button" class="new-button"><span class="new-plus">＋</span> Nova conversa <span class="new-arrow">↗</span></button>
+      <div class="sidebar-divider"></div>
+      <div class="nav-label">SUAS CONVERSAS <span class="label-mark">✧</span></div>
+      <nav id="lista-conversas" class="lista-conversas" aria-label="Conversas anteriores"></nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-illustration" aria-hidden="true"><span>✧</span><span>✦</span><span>✶</span></div>
+        <p class="bottom-title">Ideias começam aqui.</p>
+        <p class="bottom-text">Um cantinho para descobrir e criar.</p>
+        <div class="mini-divider"></div>
+        <span class="small-status"><span class="status-spark"></span> Modelo local · Qwen 2.5</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button id="abrir-sidebar" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+          <div class="topbar-copy"><span class="topbar-eyebrow">SEU ESPAÇO CRIATIVO</span><h1>Lumi AI <span class="topbar-star">✦</span></h1></div>
+        </div>
+        <div class="topbar-right"><span class="model-indicator"><span class="model-dot"></span> Qwen 2.5:3b</span><div class="avatar" aria-hidden="true">✿</div></div>
+      </header>
+
+      <section class="workspace">
+        <div class="workspace-inner">
+          <div class="conversation-heading"><div><span class="eyebrow">UM TOQUE DE CRIATIVIDADE</span><h2>Tudo começa com uma boa ideia.</h2><p id="status-texto">Seu espaço de conversa</p></div><span class="heading-ornament" aria-hidden="true">✴</span></div>
+          <div class="chat-panel" id="chat-panel">
+            <div id="welcome" class="welcome" aria-label="Início de conversa">
+              <div class="welcome-icon">✦</div>
+              <span class="welcome-tag">PRONTA PARA CONVERSAR</span>
+              <h3>Oie, que bom te ver! ✿</h3>
+              <p>Pergunte, descubra e deixe as ideias fluírem. A Lumi está aqui para te acompanhar.</p>
+              <div class="suggestions">
+                <button type="button" data-sugestao="Quais produtos da loja estão disponíveis?">✧ Ver produtos disponíveis</button>
+                <button type="button" data-sugestao="Quais produtos estão sem estoque?">✿ Produtos em falta</button>
+                <button type="button" data-sugestao="Pode listar os pedidos pendentes?">↗ Pedidos pendentes</button>
+              </div>
+            </div>
+            <div id="chat" aria-live="polite" aria-label="Mensagens do chat"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="form-container">
+        <div class="input-wrap"><form id="form">
+          <label class="sr-only" for="pergunta">Sua mensagem</label>
+          <input id="pergunta" placeholder="Escreva sua mensagem aqui..." autocomplete="off" maxlength="2000" required>
+          <button id="enviar" type="submit" aria-label="Enviar mensagem"><span>↑</span></button>
+        </form><p class="disclaimer">✦ Inteligência artificial local · As respostas podem conter imprecisões.</p></div>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
